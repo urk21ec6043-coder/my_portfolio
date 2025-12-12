@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gowtham Singh Saud | Portfolio</title>
+    <!-- Google Fonts: Orbitron for headers, Noto Sans JP for Japanese text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#FF003C', // Eva Red/Pink
+              secondary: '#00F0FF', // Cyber Cyan
+              accent: '#FBFF00', // Warning Yellow
+              dark: '#13151a',
+              darker: '#090a0f',
+              surface: '#1c1e26',
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+              sans: ['Rajdhani', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['Orbitron', 'sans-serif'],
+              jp: ['Noto Sans JP', 'sans-serif'],
+            },
+            backgroundImage: {
+              'grid-pattern': "linear-gradient(to right, #1f2937 1px, transparent 1px), linear-gradient(to bottom, #1f2937 1px, transparent 1px)",
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #090a0f;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #FF003C;
+        border-radius: 0px; /* Angular */
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #d60033;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Anime/Cyberpunk Utility Classes */
+      .clip-cut-corner {
+        clip-path: polygon(
+          20px 0, 100% 0, 
+          100% calc(100% - 20px), calc(100% - 20px) 100%, 
+          0 100%, 0 20px
+        );
+      }
+      .clip-diagonal {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+      .text-glow {
+        text-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+      }
+      .text-glow-cyan {
+        text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+      }
+      
+      /* Glitch Effect Keyframes */
+      @keyframes glitch {
+        0% { transform: translate(0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(-2px, -2px); }
+        60% { transform: translate(2px, 2px); }
+        80% { transform: translate(2px, -2px); }
+        100% { transform: translate(0); }
+      }
+      .glitch-hover:hover {
+        animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+        color: #FF003C;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-darker text-slate-300 antialiased selection:bg-secondary selection:text-darker font-sans overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
